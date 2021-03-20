@@ -1,0 +1,41 @@
+.has-border-bottom {
+	position: relative;
+
+	&::before {
+		position: absolute;
+		content: "";
+		bottom: - calcRem(15);
+		height: calcRem(15);
+		box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
+		background-color: $aqua-color;
+		width: 50%;
+		#{$right}: 0;
+		border-bottom-#{$left}-radius: $border-radius;
+		border-bottom-#{$right}-radius: $border-radius;
+		
+	}
+
+}
+
+.has-border-bottom-brown {
+	@extend.has-border-bottom;
+	&::before {
+		background-color: $brand-color;
+	}
+}
+
+.has-border-bottom-brown-side {
+	@extend.has-border-bottom;
+	&::before {
+		background-color: $brand-color;
+		height: 100%;
+		width: 1rem;
+		#{$right}: 0;
+		top: 0;
+		z-index: 9;
+		border-bottom-#{$left}-radius: 0;
+		border-bottom-#{$right}-radius: $border-radius;
+
+		border-top-#{$right}-radius: $border-radius;
+	}
+}

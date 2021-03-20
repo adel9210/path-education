@@ -1,0 +1,92 @@
+.hvr-tabs {
+	position: relative;
+	z-index: 2;
+	padding: 2rem 0;
+	padding-top: 0;
+	&::before {
+		content: "";
+		background-color: rgb(17, 9, 3);
+		opacity: 0.4;
+		position: absolute;
+		#{$right}: 0;
+		top: 0;
+		bottom: 0;
+		height: 100%;
+		z-index: 0;
+		width: 100%;
+		@include mq('lg') {
+			opacity: 0;
+		}
+	}
+	.animate {
+		animation-duration: 1s;
+		-webkit-animation-duration: 1s;
+	}
+	.hvr-tabs-items {
+		display: -webkit-box;
+		display: flex;
+		@include mq('lg') {
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			flex-flow: column;
+			padding-#{$right}: 48%;
+		}
+		li {
+			padding: 1rem 0;
+			font-size: calcRem(27);
+			color: $white;
+			margin-bottom: 10px;
+			border-bottom: 2px solid $white;
+			cursor: pointer;
+			line-height: 1.5;
+			flex: 1;
+			text-align: center;
+			&:first-child {
+				padding-top: 0;
+			}
+			&:last-child {
+				border-bottom: 0;
+			}
+			@include mq('lg') {
+				text-align: $right;
+			}
+			@include mq('xxl') {
+				font-size: calcRem(22);
+
+			}
+			span {
+				font-size: calcRem(20.6);
+				display: block;
+				@include mq('xxl') {
+					font-size: calcRem(16);
+				}
+			}
+			&.active {
+				color: $brand-color;
+				border-color: $brand-color;
+			}
+		}
+	}
+	// Content
+	.hvr-tab-content {
+		padding-top: 1rem;
+		color: $white;
+		font-size: calcRem(18);
+		line-height: 1.7;
+		padding-right: 1.5rem;
+		text-align: center;
+		color: #dbd8db;
+		@include mq('lg') {
+			text-align: $right;
+			padding-top: 0;
+		}
+		@include mq('xl') {
+			width: 75%;
+		}
+		> div {
+			&:not(:first-child) {
+				display: none;
+			}
+		}
+	}
+}

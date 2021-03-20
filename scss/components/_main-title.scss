@@ -1,0 +1,20 @@
+.main-title {
+	color: $black;
+	font-size: calcRem(32);
+	display: -webkit-inline-box;
+	display: inline-flex;
+	-webkit-box-align: center;
+	align-items: center;
+	position: relative;
+	line-height: 1.4;
+	border-top-#{$right}-radius: 5px;
+	.animate {
+		animation-duration: 1s;
+		-webkit-animation-duration: 1s;
+	}
+	strong {
+		display: block;
+		font-family: $droid-b;
+		font-size: calcRem(39.5);
+	}
+}

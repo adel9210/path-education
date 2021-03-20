@@ -1,0 +1,147 @@
+.hero-carousel {
+	height: 280px;
+	position: relative;
+	z-index: 2;
+
+	@include mq('md') {
+		height: 400px;
+	}
+
+	@include mq('lg') {
+		height: 500px;
+	}
+
+	@include mq('xl') {
+		height: calc(100vh - 7.2rem);
+		min-height: 400px;
+
+		&::before {
+			position: absolute;
+			content: "";
+			background-image: url('../images/body-background.jpg');
+			#{$left}: -75px;
+			bottom: -80px;
+			width: 150px;
+			height: 140px;
+			z-index: 999;
+			transform: rotate(45deg);
+		}
+	}
+
+	&::after {
+		position: absolute;
+		content: "";
+		background-image: url('../images/section-bk.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		#{$left}: 7rem;
+		width: 50%;
+		height: 50rem;
+		z-index: 0;
+		bottom: -25rem;
+	}
+
+	.swiper-container {
+		height: 100%;
+
+		@include mq('lg') {
+			margin-top: -2rem;
+		}
+
+		.swiper-slide {
+			overflow: hidden;
+
+			img {
+				height: 100%;
+				width: 100%;
+			}
+
+			.overlay {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				width: 100%;
+
+				@include mq('lg') {
+					width: 60%;
+				}
+
+				.hero-shape {
+					z-index: 3;
+
+					padding: 1rem;
+					background: rgba(0, 0, 0, 0.76);
+
+					@include mq('lg') {
+						padding: 2rem 10rem 6.5rem 5rem;
+						background: url('../images/hero-shape.png');
+						background-repeat: no-repeat;
+						background-size: cover;
+						background-position: right top;
+					}
+
+					p {
+						font-size: calcRem(30);
+						color: $white;
+						line-height: 35px;
+						height: 70px;
+
+						overflow: hidden;
+						text-align: center;
+
+						@include mq('lg') {
+							text-align: $right;
+							margin-bottom: -10px;
+							font-size: calcRem(40);
+							line-height: 60px;
+							height: 120px;
+						}
+					}
+
+					button {
+						color: $sand-color;
+
+						&:hover {
+							color: $white;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		display: none;
+		z-index: 9;
+		padding: 0 2rem;
+
+		&::after {
+			display: none;
+		}
+
+		img {
+			width: 3rem;
+		}
+	}
+
+	.swiper-pagination {
+		left: inherit;
+		bottom: 7.25rem;
+		right: 10rem;
+		display: none;
+
+		.swiper-pagination-bullet {
+			background: $white;
+			opacity: 1;
+		}
+
+		.swiper-pagination-bullet-active {
+			background: $yellow-color;
+		}
+
+		@include mq('lg') {
+			display: block;
+		}
+	}
+}

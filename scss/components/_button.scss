@@ -1,0 +1,79 @@
+.btn {
+	white-space: nowrap;
+	padding: calcRem(15) calcRem(30);
+    line-height: 1;
+    border-radius: 50px;
+    font-size: calcRem(18);
+
+	&.btn-primary {
+		background-color: $brand-color;
+        border-color: #e3b472;
+        transition: 0.3s ease;
+        &:hover {
+            background: transparent;
+            color: $black;
+        }
+    }
+    &.btn-outline-primary {
+        border-color: #e3b472;
+        transition: 0.3s ease;
+        color: $black;
+        &:hover {
+            background-color: $brand-color;
+            color: $white;
+        }
+    }
+    
+    &.btn-secondry {
+		background-color: $aqua-color;
+        border-color: #48bbf5;
+        transition: 0.3s ease;
+        color: $white;
+        &:hover {
+            background: transparent;
+            color: $black;
+        }
+    }
+}
+
+// .btn-primary 
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+	color: $black;
+	background-color: transparent;
+    border-color: #e3b472;
+}
+.btn-primary:focus,
+.btn-primary.focus {
+	box-shadow: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+	box-shadow: none;
+
+}
+
+
+// btn-outline-primary
+
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-primary.dropdown-toggle {
+	background-color: $brand-color;
+    border-color: #e3b472;
+    color: $white;
+}
+.btn-outline-primary:focus,
+.btn-outline-primary.focus {
+	box-shadow: none;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-primary.dropdown-toggle:focus {
+	box-shadow: none;
+
+}

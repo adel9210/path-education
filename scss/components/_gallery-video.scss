@@ -1,0 +1,36 @@
+.gallery-video {
+	a {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        border-radius: $border-radius;
+		&::after {
+			position: absolute;
+			content: "";
+			background-image: url('../img/play-icon.png');
+			width: calcRem(110);
+			height: calcRem(110);
+			background-size: contain;
+			background-repeat: no-repeat;
+            z-index: 9;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        img {
+            width: 100%;
+        }
+	}
+
+    .title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        color: $black;
+        font-size: calcRem(24);
+    }
+}

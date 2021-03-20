@@ -1,0 +1,25 @@
+.event-card {
+	background-color: $white;
+	padding: 1.5rem 1.6rem;
+	border-radius: $border-radius;
+	margin: 0 auto;
+	width: 80%;
+	@include mq('lg') {
+		width: 65%;
+		padding: 1.5rem 4rem;
+	}
+	.dates {
+		margin-bottom: 1.5rem;
+		span {
+			font-family: $font-num;
+			font-weight: bold;
+		}
+	}
+	.content {
+		p {
+			font-size: calcRem(24);
+			font-family: $droid-b;
+			line-height: 1.4;
+		}
+	}
+}

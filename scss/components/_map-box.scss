@@ -1,0 +1,26 @@
+.map-box {
+    border-radius: $border-radius;
+    overflow: hidden;
+    position: relative;
+
+    iframe {
+        height: calcRem(301);
+
+        @include mq('xxl') {
+            height: calcRem(295);
+
+        }
+    }
+
+    .title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px;
+        background-color: rgba(34, 143, 197, 0.8);
+        text-align: center;
+        color: $white;
+        font-size: calcRem(24);
+    }
+}

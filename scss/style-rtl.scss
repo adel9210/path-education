@@ -1,0 +1,7 @@
+$arabic: true;
+$direction: rtl;
+
+@import 'abstracts/variables';
+@import "../scss/vendors/bootstrap-rtl/bootstrap.scss";
+
+@import "_main";

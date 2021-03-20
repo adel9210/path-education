@@ -1,0 +1,53 @@
+.fixed-menu {
+	position: absolute;
+	#{$left}: 0;
+	top: 33rem;
+	z-index: 999;
+	display: none;
+
+	@include mq('lg') {
+		top: 730px;
+		#{$left}: 10px;
+		display: block;
+	}
+
+	&.fixed {
+		position: fixed;
+		top: 1rem;
+	}
+
+	ul {
+		background: #fff;
+		padding: 20px 15px;
+		border-radius: 50px;
+		margin-bottom: 10px;
+		box-shadow: $box-shadow;
+		list-style-type: none;
+
+		li {
+			margin-bottom: 6px;
+			text-align: center;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.circle {
+		background: #fff;
+		padding: 10px;
+		border-radius: 50%;
+		width: calcRem(50);
+		height: calcRem(50);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 10px;
+		box-shadow: $box-shadow;
+
+		img {
+			width: calcRem(30);
+		}
+	}
+}

@@ -1,0 +1,12 @@
+.form-control {
+    height: calc(2.88rem + 2px);
+    padding: 0.475rem .75rem;
+    border: 1px solid #bcbbbb;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    font-size: calcRem(19);
+    &:focus {
+        border-color: rgba(181, 141, 85, 0.5019607843137255);
+        box-shadow: 0 0 0 0.2rem rgb(216, 200, 179)
+    }
+} 

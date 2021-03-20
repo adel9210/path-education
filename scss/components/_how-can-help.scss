@@ -1,0 +1,68 @@
+.how-can-help {
+	background: $white;
+	border-radius: $border-radius;
+	overflow: hidden;
+
+	.help-form {
+		background: url('../img/help-bk.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		padding: calcRem(35) calcRem(45) calcRem(15);
+		color: $white;
+
+		h2 {
+			font-size: calcRem(18);
+
+			strong {
+				font-family: $droid-b;
+				font-size: calcRem(23);
+			}
+		}
+
+		@include mq('xxl') {
+			padding: 2rem 2rem 1.8rem;
+		}
+
+		input {
+			font-family: $droid-b;
+			font-size: calcRem(11);
+			height: 35px;
+			border-radius: $border-radius;
+			border: 1px solid $aqua-color;
+			width: 100%;
+			display: block;
+			padding-#{$right}: 15px;
+
+			&::placeholder {
+				color: #6c6b6b;
+			}
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		.btn {
+			font-size: calcRem(12.25);
+		}
+	}
+
+	.technical-support {
+		padding: calcRem(15) calcRem(35) calcRem(8);
+
+		@include mq('xxl') {
+			padding: calcRem(35) calcRem(35) calcRem(8);
+
+		}
+
+		.main-title {
+			font-size: calcRem(18.49);
+
+			strong {
+				font-size: calcRem(22.8);
+				color: $aqua-color;
+			}
+		}
+	}
+}

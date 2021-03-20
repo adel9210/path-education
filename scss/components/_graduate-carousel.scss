@@ -1,0 +1,60 @@
+.graduate-carousel {
+	.title {
+		font-size: calcRem(25.4);
+		font-family: $droid-b;
+		color: $white;
+		border-bottom: 8px solid $white;
+		margin-bottom: calcRem(30);
+		padding-bottom: calcRem(25);
+		display: inline-block;
+		padding-#{$left}: calcRem(80);
+		padding-#{$right}: calcRem(20);
+	}
+	.content {
+		line-height: 1.7;
+		padding: 1rem;
+		position: relative;
+		@include mq('sm') {
+			padding: 1rem 2rem 0 4rem;
+		}
+		@include mq('md') {
+			padding: 1rem 4rem 0 5rem;
+		}
+		&::after,
+		&::before {
+			position: absolute;
+			content: "";
+			background: url('../img/quote.png');
+			width: calcRem(30);
+			height: calcRem(30);
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+		&::after {
+			#{$left}: 0;
+			bottom: -1rem;
+			@include mq('sm') {
+				#{$left}: 2.3rem;
+				bottom: -5px;
+			}
+		}
+		&::before {
+			#{$right}: 0;
+			top: -1rem;
+			@include mq('sm') {
+				#{$right}: 1rem;
+				top: 0;
+			}
+		}
+		p {
+			font-size: calcRem(19.31);
+			@include line-clamp(5);
+		}
+	}
+	.swiper-pagination {
+		#{$left}: inherit;
+		bottom: 1.25rem;
+		#{$right}: 20rem;
+		bottom: -30px;
+	}
+}

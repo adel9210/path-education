@@ -1,0 +1,36 @@
+.breadcrumb {
+  border-radius: 0;
+  padding-right: 50px;
+  background-color: transparent;
+  color: #ffffff;
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-left: 15px;
+    }
+
+    &:last-child {
+      .breadcrumb__link-icon {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-decoration: none;
+
+    &:not(:last-child) {
+      margin-left: 15px;
+    }
+  }
+
+  &--mb-0 {
+    margin-bottom: 0;
+  }
+}

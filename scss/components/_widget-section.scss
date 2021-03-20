@@ -1,0 +1,50 @@
+.widgets-section {
+	.app-widget {
+		position: relative;
+		background: url('../img/widgets.png') no-repeat center/cover;
+		border-radius: $border-radius;
+        box-shadow: $box-shadow;
+        padding: calcRem(5) calcRem(22);
+    
+
+		.text {
+			padding-top: calcRem(70);
+			line-height: 1;
+
+			p {
+				color: #e3b472;
+				font-size: calcRem(30);
+				font-family: $droid-b;  
+				padding-right: calcRem(40);
+			}
+
+			.title {
+				color: $white;
+				font-size: calcRem(73.91);
+				position: relative;
+			}
+		}
+
+		.apps-links {
+			margin-top: calcRem(40);
+			padding-#{$right}: 0.7rem;
+
+			img {
+				width: calcRem(95);
+			}
+		}
+
+		.phone {
+			display: -webkit-box;
+			display: flex;
+			justify-content: flex-end;
+            align-items: center;
+
+			img {
+				width: calcRem(133);
+				-webkit-animation: MovingAnimate 3s infinite alternate;
+				animation: MovingAnimate 3s infinite alternate;
+			}
+		}
+	}
+}

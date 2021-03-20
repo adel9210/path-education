@@ -1,0 +1,130 @@
+.modal {
+    padding: 0 !important;
+
+    .modal-dialog {
+        .modal-content {
+            border: none;
+            padding: 45px 45px 25px 45px;
+            margin-top: 15px;
+
+            .modal-header {
+                border-bottom: 0;
+            }
+
+            .modal-footer {
+                border-top: 0;
+            }
+
+            @include mq('md') {
+                margin-top: 100px;
+            }
+
+            .close {
+                outline: none;
+                position: absolute;
+                #{$left}: 35px;
+                @include font-size(14);
+                z-index: 9;
+                top: 28px;
+                color: $invalid-color;
+
+                span {
+                    &::before {
+                        color: $invalid-color;
+                        @include font-size(12);
+
+                    }
+                }
+
+             &:hover {
+                 opacity: 1;
+             }
+            }
+        }
+
+
+
+        @include mq('lg') {
+            max-width: 860px;
+
+        }
+
+        @include mq('xl') {
+            max-width: 916px;
+
+        }
+
+    }
+
+    .modal-register-section {
+        padding: 6.286rem 3.929rem 3.929rem 9.571rem;
+
+        @include mq('lg') {
+            padding: 5.5rem 2.5rem 2.5rem 2.5rem;
+        }
+
+        @include mq('md') {
+            padding-top: 3rem;
+        }
+    }
+
+    .confirmation-details {
+        padding: 6.286rem 3.929rem 3.929rem 9.571rem;
+
+        .icon-success {
+            @include font-size(40);
+        }
+
+        @include mq('lg') {
+            padding: 5.5rem 2.5rem 2.5rem 2.5rem;
+        }
+
+        @include mq('md') {
+            padding-top: 3rem;
+        }
+    }
+
+    .login-details-modal {
+        padding: 6.286rem 2.5rem 3.929rem 4rem;
+
+        @include mq('lg') {
+            padding: 5.5rem 2.5rem 2.5rem 2.5rem;
+        }
+
+        @include mq('md') {
+            padding-top: 3rem;
+        }
+
+        .title {
+            @include font-size(30);
+        }
+    }
+
+}
+
+.phonemodal {
+    .phone-icon img {
+        display: inline-flex;
+        position: relative;
+        padding: 0.25rem 0.25rem 0 0; 
+        height: 1rem;
+        width: 1rem;
+    }
+    
+    .phone-icon-big img {
+        display: inline-flex;
+        position: relative;
+        padding: 0.25rem 0.25rem 0 0;
+        margin-bottom: -0.25rem !important; 
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+    
+     .phone-icon a, .phone-icon-big a {
+      text-decoration: none;
+      color: #cd2653;
+      font-family: Helvetica, sans-serif;
+      font-size: 1.5rem;
+    }
+    
+}

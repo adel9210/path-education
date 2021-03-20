@@ -1,0 +1,39 @@
+/*Arrow for Top*/
+.scrollToTop {
+    width: 2.857rem;
+    height: 2.857rem;
+    border-radius: $border-radius;
+    border-radius: 50%;
+    text-align: center;
+    line-height: calcRem(45);
+    background: $brand-color;
+    color: #fff;
+    text-decoration: none;
+    position: fixed;
+    bottom: 2.857rem;
+    #{$right}: 1.429rem;
+    display: none;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    z-index: 999;
+    cursor: pointer;
+
+    span[class^="icon"] {
+        &::before {
+            color: $white;
+        }
+    }
+
+    &:hover {
+        background: $black;
+        color: #fff;
+    }
+
+    @include mq('phablet') {
+        #{$right}: 5px;
+
+        &:hover {
+            transform: scale(1);
+        }
+    }
+}

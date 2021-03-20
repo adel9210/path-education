@@ -1,0 +1,47 @@
+.numbers-box {
+	a {
+		background-color: $white;
+		display: block;
+		border-radius: $border-radius;
+		padding: calcRem(25) calcRem(12);
+		display: -webkit-box;
+		display: flex;
+		-webkit-box-align: center;
+		align-items: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		flex-flow: column;
+		text-align: center;
+		.image {
+			width: 40px;
+			height: 40px;
+			margin-bottom: 1rem;
+			display: flex;
+            align-items: center;
+            transition: 0.5s ease-in-out;
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+		}
+		p {
+			color: $black;
+			font-family: $droid-b;
+			margin-bottom: 0.7rem;
+			font-size: calcRem(13);
+		}
+		span {
+			font-family: $mont;
+			background: -webkit-linear-gradient($brand-color, $brand-color, $aqua-color,$aqua-color);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-size: calcRem(16);
+		}
+		&:hover {
+			.image {
+				-webkit-animation: MovingAnimate 7s infinite alternate;
+				animation: MovingAnimate 7s infinite alternate;
+			}
+		}
+	}
+}

@@ -1,0 +1,68 @@
+.learning-adviser-box {
+	border-radius: $border-radius;
+    overflow: hidden;
+    // height: 100%;
+    background-color: $aqua-color;
+
+	.adviser {
+        padding: calcRem(15) calcRem(28) calcRem(15) calcRem(18);
+        background-color: $white;
+
+		h3 {
+			font-size: calcRem(18.49);
+			margin-bottom: calcRem(15);
+			line-height: 1.2;
+			position: relative;
+			padding-bottom: 0.6rem;
+			border-bottom: 2px solid $aqua-color;
+
+			span {
+				font-size: calcRem(22.8);
+				color: $aqua-color;
+				display: block;
+				font-family: $droid-b;
+				background-color: $white;
+				position: relative;
+			}
+		}
+		p {
+			font-family: $droid-b;
+			font-size: calcRem(11	);
+			line-height: 1.5;
+			margin-bottom: calcRem(15);
+		}
+		.link {
+			font-size: calcRem(9);
+			font-family: $droid-b;
+			color: $black;
+			display: flex;
+			align-items: center;
+			i {
+				font-size: calcRem(14);
+				color: $aqua-color;
+			}
+		}
+		img {
+			width: calcRem(62);
+			height: calcRem(143);
+		}
+	}
+	.user-manual {
+		padding: calcRem(20) calcRem(20);
+		h3 {
+			font-size: calcRem(15);
+			color: $white;
+			font-family: $droid-b;
+			line-height: 1.5;
+			span {
+				display: block;
+				font-size: calcRem(13.4);
+				word-spacing: -2px;
+			}
+		}
+		img {
+			width: calcRem(74);
+			height: calcRem(72);
+		}
+	}
+}

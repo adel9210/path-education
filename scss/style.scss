@@ -1,0 +1,7 @@
+$english: true;
+$direction: ltr;
+
+@import 
+'abstracts/variables'; 
+@import "../scss/vendors/bootstrap/bootstrap.scss";
+@import "_main.scss"; 

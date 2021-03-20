@@ -1,0 +1,21 @@
+.nice-select {
+	padding-#{$right}: calcRem(18);
+	padding-#{$left}: calcRem(30);
+	text-align: $right !important;
+	float: $right;
+	padding-#{$left}: 2rem !important;
+	.current {
+		display: block;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		color: #737171;
+	}
+	&::after {
+		#{$right}: inherit;
+		#{$left}: calcRem(10);
+		width: 10px;
+		height: 10px;
+		margin-top: -5px;
+	}
+} 

@@ -1,0 +1,54 @@
+.digital-library {
+	.tab-items {
+		overflow: hidden;
+		border-top-#{$right}-radius: $border-radius;
+		border-top-#{$left}-radius: $border-radius;
+		@include mq('lg') {
+			border-top-#{$right}-radius: $border-radius;
+			border-top-#{$left}-radius: 0;
+			border-bottom-#{$right}-radius: $border-radius;
+		}
+		.nav-item {
+			width: 50%;
+			@include mq('lg') {
+				width: 100%;
+			}
+			.nav-link {
+				background-color: $light-grey;
+				padding: 1rem;
+				font-size: calcRem(16);
+				height: 100%;
+				@include mq('lg') {
+					height: auto;
+					padding: 2.066rem 1rem;
+					font-size: calcRem(25);
+				}
+				&::before {
+					position: relative;
+					content: "";
+					font-family: "Font Awesome 5 Free";
+					font-weight: 900;
+				}
+				&.active {
+					background-color: #c9e3ee;
+					color: $black;
+				}
+			}
+		}
+	}
+	.tab-content {
+		background-color: $light-grey;
+		height: 100%;
+		padding: 2rem;
+		border-bottom-#{$right}-radius: $border-radius;
+		border-bottom-#{$left}-radius: $border-radius;
+
+		@include mq('lg') {
+			border-radius: $border-radius;
+			border-bottom-#{$right}-radius: 0;
+		}
+	}
+	.btn {
+		padding: 0.5375rem 1.875rem;
+	}
+}

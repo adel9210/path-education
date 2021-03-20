@@ -1,0 +1,124 @@
+.fancy-tabs {
+	.tab-content {
+		.animate {
+			animation-duration: 1s;
+			-webkit-animation-duration: 1s;
+		}
+
+		.text {
+			margin-top: calcRem(15);
+			font-size: calcRem(14.91);
+			line-height: 2;
+		}
+		.note {
+			margin-top: calcRem(15);
+			font-size: calcRem(10);
+			color: #4e2102;
+			display: block;
+			font-family: $droid-b;
+			line-height: 1.7;
+		}
+	}
+
+	//
+	.tab-items {
+		.nav-item {
+			.nav-link {
+				border: 1px solid #1a62a5;
+				display: -webkit-box;
+				display: flex;
+				-webkit-box-align: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				justify-content: center;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				flex-flow: column;
+				text-align: center;
+				color: $black;
+				font-size: calcRem(12);
+				font-weight: bold;
+				height: 7rem;
+				padding: 5px;
+				line-height: 1.5;
+
+				@include mq('md') {
+					padding: 10px;
+					height: 15rem;
+					font-size: calcRem(18);
+				}
+				@include mq('xl') {
+					min-height: calcRem(280);
+				}
+			
+				> div {
+					margin-bottom: 0.7rem;
+					img {
+						width: 20px;
+						@include mq('md') {
+							width: 3.5rem;
+						}
+					}
+				}
+
+				&.active {
+					background-color: #83cdeb;
+				}
+			}
+			&:first-child {
+				.nav-link {
+					border-top-#{$right}-radius: $border-radius;
+					border-bottom-#{$right}-radius: $border-radius;
+					border-#{$left}: 0;
+				}
+			}
+			&:nth-child(3) {
+				.nav-link {
+					border-#{$right}: 0;
+				}
+			}
+			&:last-child {
+				.nav-link {
+					border-top-#{$left}-radius: $border-radius;
+					border-#{$right}: 0;
+				}
+			}
+		}
+	}
+
+	.more-fancy-app {
+		display: flex;
+		justify-content: flex-end;
+		a {
+			border: 1px solid #1a62a5;
+			border-top: 0;
+			display: -webkit-box;
+			display: flex;
+			-webkit-box-pack: center;
+			justify-content: center;
+			padding: 1.5rem 1rem;
+			border-bottom-left-radius: $border-radius;
+			border-bottom-right-radius: $border-radius;
+			transition: 0.3s ease-in-out;
+			color: $black;
+			font-size: calcRem(14);
+			font-family: $droid-b;
+			&:hover {
+				background-color: $brand-color;
+				color: $white;
+			}
+			@include mq('md') {
+				font-size: calcRem(18);
+			}
+			@include mq('lg') {
+				font-size: calcRem(24);
+			}
+			img {
+				width: 12px;
+				@include mq('lg') {
+					width: calcRem(20);
+				}
+			}
+		}
+	}
+}

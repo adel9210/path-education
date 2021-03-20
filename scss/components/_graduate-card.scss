@@ -1,0 +1,44 @@
+.graduate-card {
+	background-color: $white;
+	position: relative;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-flow: column;
+	padding: calcRem(15) calcRem(20);
+	border-radius: $border-radius;
+	-webkit-box-align: center;
+	align-items: center;
+	&::after,
+	&::before {
+		position: absolute;
+		content: "";
+		width: 70%;
+		right: 15%;
+		height: 1rem;
+		background: $aqua-color;
+	}
+	&::after {
+		bottom: -1rem;
+		border-bottom-left-radius: $border-radius;
+		border-bottom-right-radius: $border-radius;
+	}
+	&::before {
+		top: -1rem;
+		border-top-left-radius: $border-radius;
+		border-top-right-radius: $border-radius;
+	}
+	img {
+		box-shadow: $box-shadow;
+		margin-bottom: calcRem(15);
+		width: 100%;
+		max-width: calcRem(214);
+		max-height: calcRem(192);
+	}
+	p {
+		font-size: calcRem(12.61);
+		text-align: center;
+		line-height: 1.7;
+	}
+}

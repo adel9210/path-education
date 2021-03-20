@@ -1,0 +1,65 @@
+.news-carousel {
+	background: url('../img/news-carousel-bk.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding: calcRem(15);
+	position: relative;
+
+	.swiper-slide {
+		width: 100%;
+
+		.slide-img {
+			border-radius: $border-radius;
+			max-height: calcRem(250);
+		}
+
+		.content {
+			padding-top: 0.5rem;
+			line-height: 1.5;
+
+			@include mq('lg') {
+				padding-left: 2rem;
+			}
+
+			.title {
+				color: $aqua-color;
+				font-size: calcRem(18);
+				margin-bottom: calcRem(10);
+				width: 100%;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+
+			.sub-title {
+				color: $aqua-color;
+				font-size: calcRem(15);
+				margin-bottom: calcRem(15);
+				color: $yellow-color;
+				@include line-clamp(3);
+			}
+
+			.text {
+				font-size: calcRem(11);
+				line-height: 1.7;
+				margin-bottom: calcRem(30);
+				color: $white;
+				@include line-clamp(4);
+			}
+
+			.show-more {
+				color: $white;
+				line-height: 1;
+                font-size: calcRem(14);
+				img {
+					width: 15px;
+					margin-#{$right}: calcRem(20);
+				}
+			}
+		}
+	}
+
+	.swiper-pagination {
+		max-width: 35%;
+	}
+}

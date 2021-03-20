@@ -1,0 +1,42 @@
+.land-services {
+	position: relative;
+    color: $white;
+	background-repeat: no-repeat;
+	background-size: cover;
+    padding: calcRem(80) calcRem(0) calcRem(95);
+    background-position: center;
+	background-color: rgb(229, 215, 206);
+	background-attachment: fixed;
+
+	.title {
+		font-size: calcRem(39.5);
+		font-family: $droid-b;
+		line-height: 1.4;
+		span {
+			font-family: $droid;
+			display: block;
+		}
+	}
+	.text {
+		font-size: calcRem(21.4);
+		line-height: 1.4;
+		@include mq('xl') {
+			width: 40%;
+		}
+	}
+	img {
+		width: 7rem;
+	}
+	.btn {
+		font-size: calcRem(14.93);
+		font-family: $droid-b;
+	}
+	.btn.btn-outline-primary {
+		color: $white;
+	}
+    @include mq('xl') {
+        padding: calcRem(80) calcRem(60);
+
+	}
+	
+}
