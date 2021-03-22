@@ -34,8 +34,8 @@
     }
 
     &__alert {
-        font-size: 18px;
-        color: #7A7470;
+      font-size: 18px;
+      color: #7a7470;
     }
 
     &__date {
@@ -46,7 +46,7 @@
         display: inline-block;
 
         &:first-of-type {
-            margin-left: 30px;
+          margin-left: 30px;
         }
       }
     }
@@ -55,14 +55,13 @@
       font-size: 18px;
       color: #323232;
       span {
-          margin-left: 5px;
-          font-size: 16px;
+        margin-left: 5px;
+        font-size: 16px;
       }
     }
   }
 
   &__sessions {
-
   }
 
   &__session {
@@ -73,19 +72,19 @@
 
     &__header {
       padding: 15px 0;
-      background-color: #F6F5F5;
+      background-color: #f6f5f5;
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding:  20px;
+      padding: 20px;
     }
 
     &__title {
       font-size: 28px;
       font-weight: bold;
-      color: #007CB0;
+      color: #007cb0;
       display: flex;
       align-items: center;
       img {
@@ -96,7 +95,7 @@
     &__season {
       font-size: 20px;
       font-weight: bold;
-      color: #007CB0;
+      color: #007cb0;
     }
 
     &__body {
@@ -107,7 +106,7 @@
     &__time {
       font-size: 14px;
       font-weight: bold;
-      color: #5F534C;
+      color: #5f534c;
       flex: 1;
       text-align: center;
     }
@@ -128,7 +127,7 @@
       h2 {
         font-weight: bold;
         font-size: 18px;
-        color: #5F534C;
+        color: #5f534c;
         cursor: pointer;
       }
 
@@ -136,8 +135,6 @@
         margin: 0 10px;
       }
     }
-
-    
   }
 
   &__toggle-days {
@@ -151,7 +148,7 @@
     h2 {
       font-size: 18px;
       font-weight: bold;
-      color: #5F534C;
+      color: #5f534c;
       cursor: pointer;
     }
   }
@@ -165,6 +162,12 @@
       flex-wrap: wrap;
     }
 
+    &__no-data {
+      font-size: 15px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
     &__day {
       background-color: #413934;
       color: #fff;
@@ -173,6 +176,7 @@
       width: 32%;
       margin-left: 15px;
       margin-bottom: 15px;
+      transition: all 0.5s ease-in-out;
 
       &__header {
         display: flex;
@@ -189,36 +193,39 @@
       &__name {
         font-size: 24px;
         font-weight: bold;
-        color: #5F534C;
+        color: #ffcda3;
       }
 
       &__body {
+      }
 
+      &:hover {
+        cursor: pointer;
+        background-color: #404092;
       }
     }
   }
 
   &__lectures {
-
   }
 
   &__lecture {
     padding: 20px;
     border-radius: 20px;
-    background-color: #24DBA7;
+    background-color: #c7b7ac;
     margin-bottom: 15px;
 
     &__heading {
       font-size: 22px;
       font-weight: bold;
-      color: #007CB0;
+      color: #007cb0;
       margin-bottom: 10px;
     }
 
     &__heading-1 {
       font-size: 18px;
       font-weight: bold;
-      color: #5F534C;
+      color: #5f534c;
     }
 
     &__attachment {
@@ -230,7 +237,7 @@
     &__name {
       font-size: 17px;
       font-weight: bold;
-      color: #007CB0;
+      color: #007cb0;
     }
 
     &__duration {
@@ -242,7 +249,7 @@
     }
 
     &__check {
-      width: 20px;
+      min-width: 20px;
       height: 20px;
       border: 2px solid #707070;
     }
@@ -251,22 +258,27 @@
       margin: 0 15px;
     }
 
-
     &--done {
       background-color: #ef4f4f;
+      .massar__lecture__heading, .massar__lecture__name{
+        color: #2a0aad;
+      }
+      .massar__lecture__heading-1 {
+        color: #ffcda3;
+      }
     }
 
     &--in-progress {
       background-color: #ffcda3;
     }
 
-    &-present {
-      background-color: #74c7b8;
+    &--coming {
+      background-color: #37e237;
     }
   }
 }
 
-@media screen and(max-width: 991px){
+@media screen and(max-width: 991px) {
   .massar {
     &__calender {
       &__day {
@@ -276,7 +288,7 @@
   }
 }
 
-@media screen and(max-width: 768px){
+@media screen and(max-width: 768px) {
   .massar {
     &__session {
       &__header {
@@ -289,7 +301,7 @@
 
       &__footer {
         flex-direction: column;
-        align-items: flex-start; 
+        align-items: flex-start;
         h2 {
           margin-bottom: 20px;
         }
@@ -303,4 +315,3 @@
     }
   }
 }
-
